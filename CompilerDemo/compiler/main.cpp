@@ -1,0 +1,27 @@
+#include<iostream>
+#include<memory>
+
+
+extern int yyparse();
+    
+extern int yylineno();
+extern std::string result;
+
+
+int main(){
+    int parse_result = yyparse();
+
+/*
+    if(result==0){
+        std::cout << "Valid input"<< std::endl;
+    } else{
+        std::cout << "Invalid input"<< std::endl;
+    }
+std::cout << "The amount of lines in the input: " << yylineno << std::endl; 
+*/
+    //std::cout<<root->toCode()<<std::endl;
+    std::cout<< result << std::endl;
+
+    return parse_result;
+    
+}

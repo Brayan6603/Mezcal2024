@@ -1,0 +1,365 @@
+    1  pwd
+    2  ls
+    3  cd Downloads/
+    4  ls
+    5  sudo dpkg -i CiscoPacketTracer822_amd64_signed.deb 
+    6  sudo apt install -f
+    7  packettracer
+    8  apt-get install psensor
+    9  sudo apt-get install psensor
+   10  psensor
+   11  sudo apt update
+   12  sudo apt upgrade
+   13  sudo apt-get upgrade
+   14  sudo apt full-upgrade -y
+   15  sudo apt install nginx -y
+   16  nginx --version
+   17  sudo systemctl status nginx
+   18  sudo ufw allow 'Nginx Full'
+   19  sudo chmod 777 /var/www/html/
+   20  sudo chmod 755 /var/www/html/
+   21  sudo chown -R www-data:www-data /var/www/html/
+   22  sudo systemctl status nginx
+   23  sudo systemctl status
+   24  sudo systemctl status nginx
+   25  sudo systemctl stop nginx
+   26  sudo systemctl status nginx
+   27  apachenetbeans
+   28  apache
+   29  netbeans
+   30  java
+   31  sudo apt install openjdk-11-jre-headless 
+   32  netbeans
+   33  java 17
+   34  java
+   35  java -jar netbeans
+   36  sudo apt install build-essential
+   37  g++ --version
+   38  ./main
+   39  cd Programs/
+   40  ./main
+   41  ls
+   42  g++ main.cpp -o main
+   43  ./main
+   44  ls
+   45  cd programs
+   46  cd Programs
+   47  g++ main.cpp -o main
+   48  ./main 
+   49  gcc main.cpp -o main
+   50  clear
+   51  cd Programs/
+   52  g++ main.cpp -o main
+   53  ./main
+   54  g++ programa2.cpp -o programa2
+   55  ./programa2 
+   56  g++ programa2.cpp -o programa2
+   57  ./programa2 
+   58  clear
+   59  g++ programa2.cpp -o programa2
+   60  ./programa2 
+   61  sudo systemctl status nginx
+   62  sudo systemctl stop nginx
+   63  sudo systemctl status nginx
+   64  pwd
+   65  clear
+   66  ls -la
+   67  cd c++/
+   68  g++ Coche.cpp -c Coche
+   69  g++ Coche.cpp -c
+   70  ./Coche
+   71  ./Coche.o
+   72  Coche.o
+   73  clear
+   74  ls
+   75  g++ Coche.cpp -c
+   76  ./Coche
+   77  g++ Coche.cpp -o Coche
+   78  g++ Coche.cpp -c
+   79  g++ -Wall
+   80  g++ -Wall Coche.o Coche
+   81  g++ Garage.cpp Coche.o -o 
+   82  ./Coche
+   83  g++ -c Coche.cpp
+   84  g++ Garage.cpp Coche.o -o Garage
+   85  g++ garage.cpp Coche.o -o Garage
+   86  clear
+   87  g++ garage.cpp Coche.o -o Garage
+   88  cls
+   89  clear
+   90  g++ Garage.cpp Coche.o -o Garage
+   91  clear
+   92  clear
+   93  ./garage
+   94  ./Garage
+   95  g++ --version 
+   96  ./Garage
+   97  cd c++
+   98  ./Garage
+   99  sudo systemctl stop nginx
+  100  sudo systemctl status nginx
+  101  sudo apt update && sudo apt upgrade
+  102  pkcon update
+  103  sudo apt install postfix
+  104  sudo systemctl postfix status
+  105  sudo systemctl status postfix
+  106  sudo systemctl stop postfix
+  107  sudo systemctl stop nginx
+  108  sudo snap install thunderbird
+  109  apt-cache search bc
+  110  sudo apt install bc
+  111  bc
+  112  cd mezcal2024
+  113  ls
+  114  pwd
+  115  cd Documents
+  116  cd Mezcal2024enPearOS/
+  117  bc
+  118  clear
+  119  sudo systemctl status postfix
+  120  sudo systemctl stop postfix
+  121  sudo systemctl stop nginx
+  122  bc
+  123  bc -l <<<'12+2*c(3.14)'
+  124  nano bcExample.txt
+  125  code lexico.l
+  126  cat lexico.l 
+  127  sudo systemctl status postfix
+  128  sudo systemctl status nginx
+  129  sudo systemctl stop nginx
+  130  sudo systemctl stop postfix
+  131  cd Programas\ arreglo/
+  132  ls
+  133  g++ arreglo4por4.cpp -o arreglo
+  134  ./arreglo
+  135  ping canva.com
+  136  sudo systemctl stop nginx
+  137  sudo systemctl stop postfix
+  138  sudo systemctl status postfix
+  139  sudo systemctl status nginx
+  140  sudo systemctl status postfix
+  141  sudo systemctl status nginx
+  142  mkdir calculator
+  143  mv lexico.l calculator/
+  144  pwd
+  145  ls
+  146  cd calculator/
+  147  pwd
+  148  ls -la
+  149  ls
+  150  code lexico.l
+  151  flex lexico.l
+  152  su
+  153  flex lexico.l
+  154  ls
+  155  cc lex.yy.c
+  156  gcc lex.yy.c
+  157  clear
+  158  ls
+  159  gcc lex.yy.c -o lexxy
+  160  code lex.yy.c
+  161  cc lex.yy.c -o miLexico -lfl -lm
+  162  nano expressions.txt
+  163  code expressions.txt
+  164  cc lex.yy.c -o miLexico -lfl -lm
+  165  flex lexico.l
+  166  cc lex.yy.c -o miLexico -lfl -lm
+  167  flex lexico.l
+  168  cc lex.yy.c -o miLexico -lfl -lm
+  169  ./miLexico expressions.txt
+  170  ping google.com
+  171  java
+  172  netbeans
+  173  apt-cache search java
+  174  apt get install openjdk-21-jdk 
+  175  apt install openjdk-21-jdk 
+  176  sudo apt install openjdk-21-jdk 
+  177  netbeans
+  178  sudo apt-get search git
+  179  sudo apt search git
+  180  clear
+  181  sudo apt install git
+  182  git --version
+  183  git init
+  184  echo "# C-Curso-de-Introducci-n" >> README.md
+  185  ls -a
+  186  git add README.MD
+  187  git add README.md
+  188  git status
+  189  git commit -m "first commit"
+  190  git config --global --edit
+  191  git commit -m "first commit"
+  192  git branch -M main
+  193  git remote add origin https://github.com/Brayan6603/C-Curso-de-Introducci-n.git
+  194  git push -u origin main
+  195  git remote add origin https://github.com/Brayan6603/C-Curso-de-Introducci-n.git
+  196  git push -u origin main
+  197  ls
+  198  cd Downloads
+  199  cd home/
+  200  ls
+  201  cd brayanarroyo6603/
+  202  ls
+  203  cd Downloads/
+  204  ls
+  205  rm Downloads
+  206  sudo rm Downloads
+  207  ls
+  208  sudo 
+  209  clear
+  210  sudo apt-cache search github desktop
+  211  sudo apt-cache search github
+  212  sudo apt install github desktop
+  213  sudo apt install github-desktop
+  214  clear
+  215  sudo apt update
+  216  sudo apt upgrade
+  217  pkcon update
+  218  clear
+  219  wget https://github.com/shiftkey/desktop/releases/download/release-3.1.7-linux1/GitHubDesktop-linux-3.1.7-linux1.deb
+  220  ls
+  221  sudo dpkg -i GitHubDesktop-linux-3.1.7-linux1.deb
+  222  ls
+  223  mv GitHubDesktop-linux-3.1.7-linux1.deb /Downloads
+  224  sudo mv GitHubDesktop-linux-3.1.7-linux1.deb /Downloads
+  225  ls
+  226  cd Downloads/
+  227  ls
+  228  ls-la
+  229  cd
+  230  ls
+  231  cd Downloads/
+  232  ls
+  233  ls -la
+  234  clear
+  235  wget https://github.com/shiftkey/desktop/releases/download/release-3.1.7-linux1/GitHubDesktop-linux-3.1.7-linux1.deb
+  236  ls
+  237  sudo dpkg -i GitHubDesktop-linux-3.1.7-linux1.deb 
+  238  sudo dpkg --install GitHubDesktop-linux-3.1.7-linux1.deb 
+  239  sudo apt install github-desktop
+  240  apt --fix-broken install
+  241  sudo apt --fix-broken install
+  242  ls
+  243  cd Dopwd
+  244  pwd
+  245  cd Documents/
+  246  ls
+  247  cd Mezcal2024enPearOS/
+  248  ls
+  249  cd calculator
+  250  ls
+  251  flex lexico.l 
+  252  ./miLexico expressions.txt
+  253  flex lexico.l 
+  254  ./miLexico expressions.txt
+  255  flex lexico.l 
+  256  ls
+  257  cc lex.yy.c -o miLexico
+  258  flex lexico.l 
+  259  cc lex.yy.c -o miLexico
+  260  ./miLexico expressions.txt
+  261  flex lexico.l 
+  262  cc lex.yy.c -m miLexico
+  263  flex lexico.l 
+  264  cc lex.yy.c -o miLexico -lfl -lm
+  265  ./miLexico expressions.txt
+  266  flex lexico.l 
+  267  cc lex.yy.c -o miLexico -lfl -lm
+  268  ./miLexico expressions.txt
+  269  flex lexico.l 
+  270  cc lex.yy.c -o miLexico -lfl -lm
+  271  ./miLexico expressions.txt
+  272  sudo systemctl status nginx
+  273  sudo systemctl stop nginx
+  274  JeSuisBA6603
+  275  sudo systemctl stop nginx
+  276  sudo systemctl status postfix
+  277  sudo systemctl stop postfix
+  278  sudo systemctl status postfix
+  279  netbeans
+  280  ls
+  281  sudo apt-cache search whatsapp
+  282  sudo apt-cache search code
+  283  sudo apt-cache search roblox
+  284  sudo apt-cache search games
+  285  sudo apt-cache search docker
+  286  sudo apt-cache search docker-desktop
+  287  sudo apt-cache search clear
+  288  clear
+  289  pwd
+  290  ls
+  291  cd Dpwd
+  292  pwd
+  293  cd Documents/
+  294  ls
+  295  cd Mezcal2024enPearOS/
+  296  ls
+  297  cd calculator/
+  298  clear
+  299  ls
+  300  code expressions.txt 
+  301  code lexico.l 
+  302  flex lexico.l 
+  303  history | grep flex
+  304  flex lexico.l 
+  305  history | grep cc
+  306  cc lex.yy.c -o miLexico -lfl -lm
+  307  ./miLexico expressions.txt 
+  308  clear
+  309  ./miLexico expressions.txt 
+  310  ls
+  311  cp lexico.l lexico_alone.l
+  312  ls
+  313  flex lexico.l 
+  314  code sintactico.y
+  315  help
+  316  clear
+  317  sudo apt-cache search bison
+  318  bison --verson
+  319  bison --version
+  320  sudo apt install bison 
+  321  bison --version
+  322  ls
+  323  cd Documents/
+  324  ls
+  325  cd Mezcal2024enPearOS/
+  326  ls
+  327  cd calculator/
+  328  ls
+  329  code sintactico.y
+  330  sudo systemctl status nginx
+  331  sudo systemctl stop nginx
+  332  sudo systemctl stop postfix
+  333  g++ EjemploNP.cpp -o EjemploNP
+  334  ./EjemploNP 
+  335  g++ NP v2.0.cpp -o numerosPrimos 
+  336  g++ NP\ v2.0.cpp -o numerosPrimos 
+  337  ./numerosPrimos 
+  338  clear
+  339  g++ arregloPrimos.cpp -o arregloPrimos
+  340  gcc arregloPrimos.cpp -o arregloPrimos
+  341  g++ arregloPrimos.cpp -o arregloPrimos
+  342  ./analizer expressions.txt 
+  343  ./analizer 
+  344  ./analizer expressions.txt 
+  345  cd .. 
+  346  ls
+  347  mkdir CompilerDemo
+  348  cd CompilerDemo/
+  349  pwd
+  350  clear
+  351  mkdir compiler
+  352  cd compiler/
+  353  lex.l
+  354  code lex.l
+  355  flex lex.l 
+  356  code grammar.y
+  357  clear
+  358  cat > prueba.txt
+  359  cat prueba.txt 
+  360  bison -d grammar.y
+  361  history
+  362  history > history.txt
+  363  ls
+  364  cat history.txt 
+  365  history > history.txt

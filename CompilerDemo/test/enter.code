@@ -1,0 +1,325 @@
+integrated {
+    nombre as Str;
+    cantidadCanciones as Int;
+    precio as Dec;
+    fechaCompra as Str;
+} as Disco;
+
+discos as Disco[100];
+Int cantidadDiscos 0;
+opcion as Int;
+ind as Int;
+
+crearDisco :: [ ] -> [void]:{
+    
+    [$cantidadDiscos >= 100]?{
+        show: "No se pueden agregar mas discos ";
+    } | {
+        show: "Ingrese el nombre del disco: ";
+        load: discos[$cantidadDiscos].nombre;
+
+        show: "Ingrese la cantidad de canciones: ";
+        load: discos[$cantidadDiscos].cantidadCanciones;
+
+        show: "Ingrese el precio del disco: ";
+        load: discos[$cantidadDiscos].precio;
+
+        show: "Ingrese la fecha de compra (dd/mm/aaaa): ";
+        load: discos[$cantidadDiscos].fechaCompra;
+
+        cantidadDiscos: $cantidadDiscos + 1;
+        show: "\nDisco agregado correctamente.\n";
+
+    }
+}
+
+leerDiscos :: [ ] -> [void]:{
+    
+    [$cantidadDiscos = 0]?{
+        show: "No existen discos registrados. ";
+    } | {
+        [i:0 \ $i < $cantidadDiscos \ i+:1]@{
+            show: "Disco: ", $i+1;
+            show: "Nombre: ", $discos[$i].$nombre;
+            show: "Cantidad de Canciones: ", $discos[$i].$cantidadCanciones;
+            show: "Precio: $", $discos[$i].$precio;
+            show: "Fecha de Compra: ", $discos[$i].$fechaCompra;
+            show: " ";
+
+        }
+
+    }
+}
+
+actualizarDisco :: [ ] -> [void]:{
+
+    show: "Ingrese el numero del disco que desea actualizar: ";
+    load: ind;
+    ind: $ind - 1;
+
+    [$ind < 0]?{
+        show: "Disco no encontrado. ";
+    } | {
+        [$ind >= 100]?{
+            show: "Disco no encontrado. ";
+        } | {
+            show: "Ingrese el nuevo nombre del disco: ";
+            load: discos[$ind].nombre;
+
+            show: "Ingrese la nueva cantidad de canciones: ";
+            load: discos[$ind].cantidadCanciones;
+
+            show: "Ingrese el nuevo precio del disco: ";
+            load: discos[$ind].precio;
+
+            show: "Ingrese la nueva fecha de compra (dd/mm/aaaa): ";
+            load: discos[$ind].fechaCompra;
+
+            show: "\nDisco actualizado correctamente.\n";
+        }
+    }
+}
+
+eliminarDisco :: [ ] -> [void]:{
+    show: "Ingrese el numero del disco que desea eliminar: ";
+    load: ind;
+    ind: $ind - 1;
+
+    [$ind < 0]?{
+        show: "Disco no encontrado. ";
+    } | {
+        [$ind >= 100]?{
+            show: "Disco no encontrado. ";
+        } | {
+            [i:$ind \ $i < $cantidadDiscos - 1 \ i+:1]@{
+                discos: [$i, $discos[$i+1]];
+            }
+
+            cantidadDiscos: $cantidadDiscos - 1;
+            show: "\nDisco eliminado correctamente.\n ";
+        }
+    }
+}
+
+ejercicio1 :: [ ] -> [void]:{
+    
+    numeros as Int[10];
+    i, j, aux, temp as Int;
+
+    i: 0;
+    [$i < 10]@{
+        show: "Introduce un numero";
+        load: aux;
+        numeros:[$i, $aux];
+        i+: 1;
+    }
+
+    // Burbuja Sort  
+
+    i: 0;
+    [$i < 9]@{
+        j: 0;
+        [$j < 9 - $i]@{
+            [$numeros[$j] > $numeros[$j + 1]]?{
+                temp: $numeros[$j];
+                aux: $numeros[$j + 1];
+                numeros: [$j, $aux];
+                numeros: [ $j + 1, $temp];
+            }
+            j: $j + 1;
+
+        }
+
+        i: $i + 1;
+    }
+    
+    // Imprimir Arreglo ordenado  
+
+    show: "..Arreglo Ordenado..";
+
+    [i:0 \ $i < 10 \ i+:1]@{
+        show: $numeros[$i];
+    }
+
+    
+}
+
+ejercicio2 :: [ ] -> [void]:{
+
+    aux, temp, suma, maxFrecuencia, moda, modaEncontrada as Int;
+    media, mediana as Dec;
+
+    numeros as Int[10];
+    frecuencia as Int[10];
+
+    suma: 0;
+    moda: 0;
+    modaEncontrada: 0;
+
+    [i:0 \ $i < 10 \ i+:1]@{
+        show: "Introduce un numero";
+        load: aux;
+        numeros:[$i, $aux];
+    }
+
+    // media
+
+    [i:0 \ $i < 10 \ i+:1]@{
+        suma+: $numeros[$i]; 
+    }
+
+    media: $suma / 10.0;
+    
+    //Burbuja
+
+    [i:0 \ $i < 9 \ i: $i + 1]@{
+
+        [j:0 \ $j < 9 - $i \ j: $j + 1]@{
+
+            [$numeros[$j] > $numeros[$j+1]]?{
+                
+                temp: $numeros[$j];
+                numeros: [$j, $numeros[$j+1]];
+                numeros: [$j+1, $temp];
+            }
+
+        }
+    }
+
+    //mediana
+
+    [10 % 2 = 0]?{
+        mediana: $numeros[4];
+        mediana+: $numeros[5];
+        mediana/: 2.0;
+    } | {
+        mediana: $numeros[5];
+    }
+
+    // moda
+
+    [i:0 \ $i < 10 \ i+:1]@{
+
+        frecuencia: [$i, 0];
+        [j:0 \ $j < 10 \ j+:1]@{
+            [$numeros[$i] = $numeros[$j]]?{
+                aux: $frecuencia[$i];
+                aux: $aux + 1;
+                frecuencia: [$i, $aux];
+            }
+        }
+    }
+
+   maxFrecuencia: 0;
+
+   [i:0 \ $i < 10 \ i+: 1]@{
+         [$frecuencia[$i] > $maxFrecuencia]?{
+            maxFrecuencia: $frecuencia[$i];
+            moda: $numeros[$i];
+            modaEncontrada: 1;
+         }
+   }
+
+    show: "La media es: "  , $media;
+    show: "La mediana es: ", $mediana;
+    show: "La moda es: ", $moda;
+}
+
+ejercicio3 :: [ ] -> [void]:{
+
+    opcion: 0;
+
+    [$opcion != 5]@{
+
+        show: "  ----- Menu Discos -----";
+        show: "      Selecciona una opcion.... ";
+        show: "      (1) Crear nuevo disco ";
+        show: "      (2) Leer información de discos ";
+        show: "      (3) Actualizar información de un disco ";
+        show: "      (4) Eliminar un disco ";
+        show: "      (5) Salir ";
+
+        load: opcion;
+
+        [$opcion = 1]?{
+
+            crearDisco[];
+
+        } [$opcion = 2]?{
+
+            leerDiscos[];
+
+        } [$opcion = 3]?{
+
+            actualizarDisco[];
+
+        } [$opcion = 4]?{
+
+            eliminarDisco[];
+
+        } [$opcion = 5]?{
+
+            show: "Saliendo de discos....";
+
+        } | {
+            
+            show: "Valor invalido, vuelve a ingresar...";
+        }
+        
+
+    }
+
+    
+}
+
+
+main :: [ ] -> [Int]:
+{   
+    op as Int;
+    op: 0;
+
+
+    [$op != 4]@{
+
+        show: "  ---Menu Mezcal Bateria de Pruebas---";
+        show: "      Selecciona una opcion.... ";
+        show: "      (1) Ejercicio 1 ";
+        show: "      (2) Ejercicio 2 ";
+        show: "      (3) Ejercicio 3 ";
+        show: "      (4) Salir *_* ";
+
+        load: op;
+
+        [$op = 1]?{
+
+            ejercicio1[];
+
+        } [$op = 2]?{
+
+            ejercicio2[];
+
+        } [$op = 3]?{
+
+            ejercicio3[];
+
+        } [$op = 4]?{
+
+            show: "Saliendo....";
+
+        } | {
+            
+            show: "Valor invalido, vuelve a ingresar...";
+        }
+        
+
+    }
+
+    answer: 0;
+}
+
+
+
+
+
+
+
